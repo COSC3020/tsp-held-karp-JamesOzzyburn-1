@@ -49,9 +49,5 @@ is the worst-case asymptotic memory complexity? Add your answer, including your
 reasoning, to this markdown file.
 
 ## Answer
-
-
-My code first starts with four constant operations, so we can just ignore those. 
-Then we have a for loop that goes from $0$ to $n$ where $n$ is the number of cites in our matrix so $n$ so far. 
-Nested in it, it has a for loop that fills an array from $0$ to $n$. We then have the call to our recursive tsp_hk, which has two for loops in it.
-The first for loop goes from $0$ to $n$. The second for loop goes from $0$ to $n-1$ because it is looping through all the new cities which contains all the old cities minus the start, but as it's a constant we can throw it away. So as we are iterating through all possible subsets of our original matrix of cities we have 2^n. Additionally for each permutation we are doing $n^2$ work so, in total we are doing 2^n n^2 work. So our worst possible time complexity is $\Theta(2^n n^2)$.
+My code first starts with four constant operations, so we can just ignore those.
+Then we have a for loop that goes from $0$ to $n$ where $n$ is the number of cites in our matrix so $n$ so far. Nested in it, it has a for loop that fills an array from $0$ to $n$. We then have the call to our recursive tsp_hk, which has two for loops in it. The first for loop goes from $0$ to $n$. The second for loop goes from $0$ to $n-1$ because it is looping through all the new cities which contains all the old cities minus the start, but as it's a constant we can throw it away. So as we are iterating through all possible subsets of our original matrix of cities, we have $2^n$. Additionally, for each permutation we are doing $n^2$ work so, in total, we are doing $2^n n^2$ work. So our worst possible time complexity is $\Theta(2^n n^2)$.
