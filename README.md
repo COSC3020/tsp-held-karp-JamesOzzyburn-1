@@ -1,3 +1,4 @@
+[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/KdVea3AG)
 # Traveling Salesperson Problem -- Held-Karp Algorithm
 
 This exercise is about the Traveling Salesperson Problem I mentioned in the
@@ -46,3 +47,6 @@ Test your new function; I've provided some basic testing code in `code.test.js`.
 What is the worst-case asymptotic time complexity of your implementation? What
 is the worst-case asymptotic memory complexity? Add your answer, including your
 reasoning, to this markdown file.
+
+## Answer
+For my code, if we fill up every key, we get a memory complexity of $\Theta(n*(2^n))$ this is because we need to create a cache entry for every combination of subset city and start city. This then also leads us to our worst case time complexity of $\Theta(n*(2^n))$. This also makes sense intuitively, as the “regular” runtime of Held-Karp is $\Theta(n^2*(2^n))$ so if we use dynamic programming to only calculate new stuff when needed we should see a pretty steep decrease in asymptotic runtime.
